@@ -17,8 +17,10 @@ while op != 5:
     elif op == 3:
         if n1 > n2:
             print(f'O maior numero entre os dois foi: {n1}')
-        else:
+        elif n1 < n2:
             print(f'O maior numero entre os dois foi: {n2}')
+        elif n1 == n2:
+            print('Os dois valores são iguais')    
     elif op == 4:
         print('Digite os novos valores:')
         n1 = int (input('Digite o 1o numero: '))
