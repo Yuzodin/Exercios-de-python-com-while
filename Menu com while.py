@@ -1,33 +1,34 @@
 from time import sleep
-n1 = int (input('Digite o 1o numero: '))
-n2 = int (input ('Digite o 20 numero: '))
-op = 0
-while op != 5:
-    print('''====== MENU ======
-          [1] SOMA
-          [2] MULTIPLICAÇÃO
-          [3] MAIOR NUMERO
-          [4] NOVOS NUMEROS
-          [5] SAIR DO PROGAMA ''')
-    op = int(input ('Digite sua opção: '))
-    if op == 1:
-        print(f'A soma entre: {n1} + {n2} = {n1 + n2}')
-    elif op == 2:
-        print(f'A multiplicação entre: {n1} x {n2} = {n1 * n2}')
-    elif op == 3:
+n1 = int(input ('Digite o primeiro valor: '))
+n2 = int(input ('Digite o segundo valor: '))
+opção = 0
+while opção != 5:
+    print('''======= MENU =======
+    [1] Soma de numeros
+    [2] Multiplicação de numeros
+    [3] Maior entre dois numeros
+    [4] Novos numeros
+    [5] Sair do progama ''')
+    opção = int(input('Qual a sua escolha: '))   
+
+    if opção == 1:
+        print(f'Aqui está a soma entre os dois: {n1} + {n2} = {n1 +n2}')
+    elif opção == 2:
+        print(f'Aqui está a multiplicação entre os dois: {n1} x {n2} = {n1*n2}')
+    elif opção == 3:
         if n1 > n2:
-            print(f'O maior numero entre os dois foi: {n1}')
+            print(f'O maior valor entre os dois é: {n1}')  
         elif n1 < n2:
-            print(f'O maior numero entre os dois foi: {n2}')
+            print(f'O maior valor entre os dois é: {n2}') 
         elif n1 == n2:
-            print('Os dois valores são iguais')    
-    elif op == 4:
-        print('Digite os novos valores:')
-        n1 = int (input('Digite o 1o numero: '))
-        n2 = int (input ('Digite o 20 numero: '))
-    elif op == 5:
-        print('Saindo do progama!!') 
-        sleep(2)  
+            print('Não a maior valor entre os dois pois os dois são iguais.')
+    elif opção == 4:
+        print('Claro! Digite novos valores que deseja:')
+        n1 = int(input ('Digite o novo primeiro valor: '))
+        n2 = int(input ('Digite o novo segundo valor: '))
+    elif opção == 5:
+        sleep(2)
+        print('OK, fechando o progama!.')
     else:
-        print('Opção invalida tente novamnete: ')             
-print('Fim do progama!.')    
+        print('OPS! opção invalida, tente novamente. ')
+        sleep(1)
